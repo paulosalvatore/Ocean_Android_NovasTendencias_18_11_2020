@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
             ViewModelProvider(this, GameViewModelFactory())
                 .get(GameViewModel::class.java)
 
+        binding.viewModel = viewModel
+
 //        val donkeyKong = GameKt("Donkey Kong", 1981)
 //
 //        binding.game = donkeyKong
