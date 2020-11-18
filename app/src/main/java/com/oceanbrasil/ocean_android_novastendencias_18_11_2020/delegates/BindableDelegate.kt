@@ -10,7 +10,8 @@ fun <R : BaseObservable, T : Any> bindable(
 }
 
 class BindableDelegate<in R : BaseObservable, T : Any>(
-    private var value: T, private val bindingEntry: Int
+    private var value: T,
+    private val bindingEntry: Int
 ) {
 
     operator fun getValue(thisRef: R, property: KProperty<*>): T = value
