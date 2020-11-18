@@ -24,11 +24,5 @@ class MainActivity : AppCompatActivity() {
                 .get(GameViewModel::class.java)
 
         binding.viewModel = viewModel
-
-//        val donkeyKong = GameKt("Donkey Kong", 1981)
-//
-//        binding.game = donkeyKong
-
-//        tvName.text = donkeyKong.name
     }
 }
