@@ -10,24 +10,27 @@ import com.oceanbrasil.ocean_android_novastendencias_18_11_2020.viewmodel.GameVi
 import com.oceanbrasil.ocean_android_novastendencias_18_11_2020.viewmodel.GameViewModelFactory
 
 class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_main)
-
-        // Tipo de classe de Binding gerada:
-        // ActivityMainBinding
-
-        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(
+    private val binding by lazy {
+        DataBindingUtil.setContentView<ActivityMainBinding>(
             this,
             R.layout.activity_main
         )
+    }
 
-        val viewModel =
-            ViewModelProvider(
-                this,
-                GameViewModelFactory()
-            ).get(GameViewModel::class.java)
+    private val viewModel by lazy {
+        ViewModelProvider(
+            this,
+            GameViewModelFactory()
+        ).get(GameViewModel::class.java)
+    }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        loadBindingVariables()
+    }
+
+    private fun loadBindingVariables() {
         binding.viewModel = viewModel
     }
 }
