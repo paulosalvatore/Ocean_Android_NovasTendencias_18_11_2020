@@ -3,6 +3,7 @@ package com.oceanbrasil.ocean_android_novastendencias_18_11_2020
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import com.oceanbrasil.ocean_android_novastendencias_18_11_2020.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -18,9 +19,13 @@ class MainActivity : AppCompatActivity() {
             R.layout.activity_main
         )
 
-        val donkeyKong = GameKt("Donkey Kong", 1981)
+        val viewModel =
+            ViewModelProvider(this, GameViewModelFactory())
+                .get(GameViewModel::class.java)
 
-        binding.game = donkeyKong
+//        val donkeyKong = GameKt("Donkey Kong", 1981)
+//
+//        binding.game = donkeyKong
 
 //        tvName.text = donkeyKong.name
     }
