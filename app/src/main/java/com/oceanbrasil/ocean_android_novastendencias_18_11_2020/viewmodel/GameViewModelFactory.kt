@@ -1,4 +1,4 @@
-package com.oceanbrasil.ocean_android_novastendencias_18_11_2020
+package com.oceanbrasil.ocean_android_novastendencias_18_11_2020.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

@@ -7,13 +7,13 @@
 
         <variable
             name="viewModel"
-            type="com.oceanbrasil.ocean_android_novastendencias_18_11_2020.GameViewModel" />
+            type="com.oceanbrasil.ocean_android_novastendencias_18_11_2020.viewmodel.GameViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".view.MainActivity">
 
         <ImageView
             android:contentDescription="Game Image"

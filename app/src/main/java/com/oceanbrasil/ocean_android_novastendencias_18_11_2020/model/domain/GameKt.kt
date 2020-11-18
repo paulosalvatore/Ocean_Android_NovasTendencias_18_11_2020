@@ -1,4 +1,4 @@
-package com.oceanbrasil.ocean_android_novastendencias_18_11_2020
+package com.oceanbrasil.ocean_android_novastendencias_18_11_2020.model.domain
 
 data class GameKt(
     val name: String,
